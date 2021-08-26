@@ -29,5 +29,5 @@ client.on("interactionCreate", async interaction => {
         });
     }
 })
-
+client.ws.connection.triggerReady();
 client.login(process.env.TOKEN);
