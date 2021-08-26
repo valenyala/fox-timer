@@ -1,7 +1,6 @@
-const {SlashCommandBuilder} = require('@discordjs/builders');
 const {REST} = require("@discordjs/rest");
 const {Routes} = require("discord-api-types/v9");
-require("dotenv").config();
+//require("dotenv").config();
 const fileManager = require("./fileManager");
 
 const commands = fileManager.getCommandsToJSON("./commands");

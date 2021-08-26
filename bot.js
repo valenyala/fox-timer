@@ -1,6 +1,6 @@
 const fileManager = require("./fileManager");
 const {Client, Intents} = require('discord.js');
-require("dotenv").config();
+//require("dotenv").config();
 
 const client = new Client({intents: [Intents.FLAGS.GUILDS]});
 client.commands = fileManager.getCommandsAsCollection("./commands");
