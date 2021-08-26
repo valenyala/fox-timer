@@ -1,5 +1,5 @@
 {
-  "name": "fox-timer",
+  "name": "fox-pomodore",
   "version": "1.0.0",
   "description": "A Discord Timer",
   "main": "bot.js",
