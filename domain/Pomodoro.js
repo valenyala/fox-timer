@@ -72,13 +72,11 @@ class Pomodoro{
 
     changeInterval(){
         if(this.status === Pomodoro.RUNNING){
-            if(this.shortBreakCount >= 3){
-                this.interval = timeConverter.minToMs(this.longBreak);
-            }else{
-                this.interval = timeConverter.minToMs(this.shortBreak);
-            }
-        }else if(this.status === Pomodoro.SHORT_BREAK || this.status === Pomodoro.LONG_BREAK){
             this.interval = timeConverter.minToMs(this.workTime);
+        }else if(this.status === Pomodoro.SHORT_BREAK){
+            this.interval = timeConverter.minToMs(this.shortBreak);
+        }else if(this.status === Pomodoro.LONG_BREAK){
+            this.interval = timeConverter.minToMs(this.longBreak);
         }
     }
 

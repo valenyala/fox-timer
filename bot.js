@@ -1,13 +1,13 @@
 const fileManager = require("./fileManager");
 const {Client, Intents} = require('discord.js');
-//require("dotenv").config();
+require("dotenv").config();
 
 const client = new Client({intents: [Intents.FLAGS.GUILDS]});
 client.commands = fileManager.getCommandsAsCollection("./commands");
 
+client.login(process.env.TOKEN);
 client.once("ready", () => {
     console.log("Conectado!");
-    console.log(client.application);
 });
 
 client.on("interactionCreate", async interaction => {
@@ -30,4 +30,3 @@ client.on("interactionCreate", async interaction => {
         });
     }
 })
-client.login(process.env.TOKEN);
